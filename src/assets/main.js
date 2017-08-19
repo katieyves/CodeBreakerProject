@@ -19,7 +19,7 @@ function guess() {
     	setMessage("You Win! :)");
     	showAnswer(true);
     	showReplay();
-    } else if (attempt.value >= 10) {
+    } else if (attempt.value > 10) {
     	setMessage("You Lose! :(");
     	showAnswer(false);
     	showReplay();
@@ -82,7 +82,7 @@ function showAnswer(param) {
 	let code = document.getElementById('code');
 	code.innerHTML = answer.value;
 	if (param) {
-		code.className += ' succes';
+		code.className += ' success';
 	} else {
 		code.className += ' failure';
 	}
